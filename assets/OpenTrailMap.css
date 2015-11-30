@@ -1,0 +1,147 @@
+#header {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2000;
+  background-color: rgba(0,0,0,0);
+  pointer-events: none;
+}
+#header a{
+  color: #000;
+  pointer-events: auto;
+}
+#search_bar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 70px;
+  z-index: 2000;
+  background-color: rgba(255,255,255,0.0);
+  pointer-events: none;
+}
+#search_box {
+  position: relative;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: auto;
+}
+/*Override some defaults that come with leaflet-search*/
+.leaflet-control-search .search-input {
+  background: rgba(255,255,255,0.5);
+  height:28px;
+  padding:0 18px 0 5px;
+}
+.leaflet-control-search .search-button {
+  display:none;
+}
+.leaflet-control-search .search-tooltip {
+  top: 32px;
+}
+html, body, #map-canvas{
+  position:relative;
+  height:100%;
+  width:100%;
+  padding: 0px;
+  overflow: hidden;
+  text-align: center;
+}
+#map{
+  height:100%;
+}
+#tooltip {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+#tooltip.hidden {
+  display: none;
+}
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+#infoPanel{
+  position:relative;
+  max-width:700px;
+  height:150px;
+  top:0px;
+  left:0px;
+  background: #ffffff;
+  overflow: auto;
+  
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+}
+.show-infoPanel#infoPanel{
+  -webkit-transform: translateY(-150px);
+  transform: translateY(-150px);
+  
+  -webkit-box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.4);
+}
+#distance #ele_max, #ele_min, #ele_gain, #ele_loss{
+  
+}
+a.toggle-info{
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  right:0px;
+  top:0px;
+  padding:5px;
+}
+.load-icon {
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background: rgba(0, 0, 0, 0.2);
+}
+.load-icon i{
+  position: absolute;
+  top: 50%;
+}
+.path{
+  stroke:#000;
+  stroke-dasharray:5,5;
+}
+.cycleway{
+  stroke: #984ea3;
+}
+.track{
+  stroke: #000
+}
+::-webkit-input-placeholder {
+   color: #000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:  #000;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:  #000;  
+}
+
+:-ms-input-placeholder {  
+   color:  #000;  
+}

@@ -1,0 +1,24 @@
+{
+  "name": "open_trail_map",
+  "version": "1.0.0",
+  "description": "package for visualizing trail data from OpenStreetMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Open",
+    "Street",
+    "Map"
+  ],
+  "author": "Michael Skaug",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4.0",
+    "leaflet": "^0.7.7",
+    "leaflet-legend": "^1.0.0",
+    "leaflet-search": "^1.8.4",
+    "osmtogeojson": "^2.2.5"
+  }
+}
