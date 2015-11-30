@@ -6,7 +6,7 @@ for further information:
 [http://michaelskaug.com/open_trail_map/](http://michaelskaug.com/open_trail_map)
 
 ## Example
-[OpenTrails](http://michaelskaug.com/projects/OpenTrailMap/)
+[Open Trail Map](http://michaelskaug.com/projects/OpenTrailMap/)
 
 ## Usage
 The entry point is ```index.html```.  To run the app, start a web server in this repository's directory with, for example:
