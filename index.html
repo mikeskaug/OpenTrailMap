@@ -46,6 +46,10 @@
     <script src="node_modules/leaflet-search/dist/leaflet-search.min.js"></script>
     <link rel="stylesheet" href="node_modules/leaflet-search/dist/leaflet-search.min.css" />
     
+    <!-- Leaflet.Locate control plugin-->
+    <script src="node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    
     <!-- Leaflet.legend JS and CSS-->
     <script src="node_modules/leaflet-legend/leaflet-legend.js"></script>
     <link rel="stylesheet" href="node_modules/leaflet-legend/leaflet-legend.css" />
@@ -56,6 +60,7 @@
   </head>
   <body>
       <div class="load-icon"><i class="fa fa-spinner fa-pulse fa-3x"></i></div>
+      <div id="zoom-msg"></div>
       <div id="legend">
         <svg width="120" height="80">
           <line x1="10" y1="20" x2="40" y2="20" class="path" />

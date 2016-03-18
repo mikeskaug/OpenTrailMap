@@ -1,6 +1,6 @@
 # Open Trail Map
 
-Open Trail Map is a web application to view trails, bike paths and dirt roads in the [OpenStreetMap](https://www.openstreetmap.org/) database.  It allows a user to search for any location in the world and then select a trail to view distances, elevation stats and an elevation profile.
+Open Trail Map is a web application to view trails, bike paths and dirt roads in the [OpenStreetMap](https://www.openstreetmap.org/) database.  It allows a user to search for any location in North America and then select a trail to view distances, elevation stats and an elevation profile.
 
 for further information:
 [http://michaelskaug.com/open_trail_map/](http://michaelskaug.com/open_trail_map)
@@ -20,6 +20,7 @@ Open Trail Map is built on Leaflet in addition to some plugins and libraries:
 - [Leaflet 0.7.7](http://leafletjs.com/download.html)
 - [leaflet-search 1.8.4](https://github.com/stefanocudini/leaflet-search)
 - [leaflet-legend 1.0.0](https://github.com/mikeskaug/Leaflet.Legend)
+- [leaflet-locatecontrol 0.48.0](https://github.com/domoritz/leaflet-locatecontrol)
 - [bootstrap 3.3.5](http://getbootstrap.com)
 - [font-awesome 4.4.0](https://fortawesome.github.io/Font-Awesome/)
 - [osmtogeojson 2.2.5](https://github.com/tyrasd/osmtogeojson)
@@ -56,7 +57,7 @@ Open Trail Map also uses the [Google Maps Javascript API](https://developers.goo
 ```
 
 ### To Do
-The most significant issue now is that trail data is not loaded dynamically as the user pans and zooms the map, as a user might expect.  If a user wants to view trails in a new location, she must search for the new location and then trail data is loaded for a limited region around that point.  The reason for this is the significant time required to query and load data from the OpenStreetMap API.  The best solution would probably be to build a new database specifically designed for this purpose, or try caching data and limiting the pan and zoom.
+Trail data is now loaded from a dedicated AWS server, rather than the public Overpass API. As a result, response times are much shorter, but it only supplies data for North America because of limited resources. Download times are still quite long, so additional simplification and compression of the trail data on the backend would improve performance. 
 
 
 

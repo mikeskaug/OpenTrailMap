@@ -40,6 +40,9 @@
 .leaflet-control-search .search-tooltip {
   top: 32px;
 }
+.leaflet-popup-tip-container {
+  display: none;
+}
 html, body, #map-canvas{
   position:relative;
   height:100%;
@@ -119,6 +122,14 @@ background: rgba(0, 0, 0, 0.2);
 .load-icon i{
   position: absolute;
   top: 50%;
+}
+#zoom-msg {
+  position: fixed;
+  left: 35px;
+  top: 35px;
+  width: 0px;
+  height: 0px;
+  z-index: 9999;
 }
 .path{
   stroke:#000;
