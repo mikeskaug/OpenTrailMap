@@ -1,6 +1,6 @@
 {
   "name": "open_trails",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "package for visualizing trail data from OpenStreetMap",
   "main": "index.js",
   "scripts": {
