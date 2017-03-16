@@ -11,7 +11,7 @@ for further information:
 ## Usage
 The entry point is ```index.html```.  To run the app, start a web server in this repository's directory with, for example:
 ```
-python -m SimpleHTTPServer
+python -m SimpleHTTPServer 8000
 ```
 and then navigate to ```http://localhost:8000/#``` in a web browser
 
@@ -56,8 +56,6 @@ Open Trail Map also uses the [Google Maps Javascript API](https://developers.goo
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&libraries=geometry"></script>
 ```
 
-### To Do
-Trail data is now loaded from a dedicated AWS server, rather than the public Overpass API. As a result, response times are much shorter, but it only supplies data for North America because of limited resources. Download times are still quite long, so additional simplification and compression of the trail data on the backend would improve performance. 
 
 
 
