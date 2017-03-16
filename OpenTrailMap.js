@@ -18,7 +18,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy <a href="http://mapbox.com">Mapbox</a>',
 	maxZoom: 18,
 	id:'mapbox.run-bike-hike',
-	accessToken: 'YOUR ACCESS TOKEN'
+	accessToken: 'pk.eyJ1IjoibWlrZXNrYXVnIiwiYSI6ImNpZzl1MHJ4eTAydDR1ZG0xcnE1Nm95NnUifQ._cFzGhBLWh5v1tZJ0C15Bg'
 }).addTo(map);
 
 var visibleStyle = {
@@ -216,8 +216,8 @@ function load_paths() {
 	bnds = map.getBounds();
 	dataExtent = bnds.pad(0.3);
 	bnds_str = dataExtent.getSouth()+','+dataExtent.getWest()+','+dataExtent.getNorth()+','+dataExtent.getEast()
-	baseurl = "http://ec2-54-85-8-224.compute-1.amazonaws.com/api/interpreter?";
-	query = 'data=[out:json][timeout:25];(way["highway"]('+bnds_str+'););out body;>;out skel qt;';
+	baseurl = "http://overpass-api.de/api/interpreter?";
+	query = 'data=[out:json][timeout:25];(way["highway"="path"]('+bnds_str+');way["highway"="track"]('+bnds_str+');way["highway"="cycleway"]('+bnds_str+'););out body;>;out skel qt;';
 
 	$(".load-icon").show();
 	$.getJSON(baseurl+query,  function(data) {
